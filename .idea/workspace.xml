@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="" />
+    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Initial code">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Philisopher.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Stick.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IGTk6rUUPCgAC6Gx0O6HYXhAN2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -28,6 +50,29 @@
       <option name="presentableId" value="Default" />
       <updated>1669807063624</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial code">
+      <created>1669807202770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669807202771</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial code" />
   </component>
 </project>

@@ -1,7 +1,29 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    println("Укажите числом количество философов за круглым столом")
+    val countPhilosopher = enteringCountNum()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val philosophers = ArrayList<Philisopher>()
+    val sticks = ArrayList<Stick>()
+
+
+
+}
+
+fun enteringCountNum(): Int {
+    var intCountBool = true
+    var userCount = ""
+    while (intCountBool) {
+        print("Введите количество указав целое положительное число - ")
+        userCount = readln()
+        if (isPosOrNegNumber(userCount)) {
+            intCountBool = false
+        }
+    }
+    return userCount.toInt()
+}
+
+fun isPosOrNegNumber(s: String): Boolean {
+    val regex = """^[0-9]+$""".toRegex()
+    return if (s.isNullOrEmpty()) false
+    else regex.matches(s)
 }
