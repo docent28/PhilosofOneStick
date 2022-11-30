@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Initial code">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Philisopher.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Stick.kt" afterDir="false" />
+    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Добавлены два класса - Философы и палочки&#10;Пишем диалог для ввода">
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669807202771</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлены два класса - Философы и палочки&#10;Пишем диалог для ввода">
+      <created>1669813092540</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669813092540</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -65,7 +70,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="version01" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -73,6 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial code" />
+    <MESSAGE value="Добавлены два класса - Философы и палочки&#10;Пишем диалог для ввода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены два класса - Философы и палочки&#10;Пишем диалог для ввода" />
   </component>
 </project>
