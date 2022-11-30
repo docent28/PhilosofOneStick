@@ -19,8 +19,27 @@ fun main(args: Array<String>) {
 
     while (timeMap.isNotEmpty()) {
         val indexPhilosopher = selectPhilosopherRandom(timeMap)
+        if (checkStickOccupany(sticks, indexPhilosopher, countPhilosopher)) {
+
+        }
+        timeMap.remove(indexPhilosopher)
+    }
+}
+
+fun checkStickOccupany(
+    timeSticks: ArrayList<Stick>,
+    indexPhilosopher: Int,
+    countPhilosopher: Int
+): Boolean {
+    val indexStickLeft = indexPhilosopher
+    val indexStickRight = if (indexPhilosopher - 1 == -1){
+        countPhilosopher - 1
+    } else{
+        indexPhilosopher
     }
 
+
+    return true
 }
 
 fun selectPhilosopherRandom(mapPhilosopher: Map<Int, String>): Int {
