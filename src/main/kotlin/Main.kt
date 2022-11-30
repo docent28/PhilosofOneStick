@@ -19,27 +19,36 @@ fun main(args: Array<String>) {
 
     while (timeMap.isNotEmpty()) {
         val indexPhilosopher = selectPhilosopherRandom(timeMap)
-        if (checkStickOccupany(sticks, indexPhilosopher, countPhilosopher)) {
-
+        if (checkStickOccupancy(sticks, indexPhilosopher, countPhilosopher)) {
+            philosophers[indexPhilosopher].state = "takes Food"
+            println("Взял или слева или справа")
+        } else {
+            println("${philosophers[indexPhilosopher].name} размышляет")
         }
         timeMap.remove(indexPhilosopher)
     }
 }
 
-fun checkStickOccupany(
+fun checkStickOccupancy(
     timeSticks: ArrayList<Stick>,
     indexPhilosopher: Int,
     countPhilosopher: Int
 ): Boolean {
     val indexStickLeft = indexPhilosopher
-    val indexStickRight = if (indexPhilosopher - 1 == -1){
+    val indexStickRight = if (indexPhilosopher - 1 == -1) {
         countPhilosopher - 1
-    } else{
+    } else {
         indexPhilosopher
     }
-
-
-    return true
+    val timeIndexStick = mutableListOf(indexStickLeft, indexStickRight)
+    val rndStick = timeIndexStick.random()
+    if (timeSticks[rndStick].state == "busy") {
+        timeIndexStick.remove(rndStick)
+        return false
+    } else {
+        timeSticks[rndStick].state = "busy"
+        return true
+    }
 }
 
 fun selectPhilosopherRandom(mapPhilosopher: Map<Int, String>): Int {
