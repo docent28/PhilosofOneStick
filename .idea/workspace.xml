@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Пишем checkStickOccupany&#10;Случайный выбор свободной палочки">
+    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Остановились на 46-й строке">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669815088045</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Остановились на 46-й строке">
+      <created>1669817701875</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669817701875</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,7 +103,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="version01" />
+                        <option value="version02" />
                       </list>
                     </value>
                   </entry>
@@ -111,6 +120,7 @@
     <MESSAGE value="Добавлены два класса - Философы и палочки&#10;Пишем диалог для ввода" />
     <MESSAGE value="Слили ветку в master" />
     <MESSAGE value="Пишем checkStickOccupany&#10;Случайный выбор свободной палочки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пишем checkStickOccupany&#10;Случайный выбор свободной палочки" />
+    <MESSAGE value="Остановились на 46-й строке" />
+    <option name="LAST_COMMIT_MESSAGE" value="Остановились на 46-й строке" />
   </component>
 </project>
