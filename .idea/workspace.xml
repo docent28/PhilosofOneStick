@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Задача решена&#10;Теперь хочу указывать, кто какой вилкой обедает">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="9531e8f1-878c-45c9-9819-85e72d9c68bf" name="Changes" comment="Показываем справа или слева была взята вилка&#10;Генерируем имя, если оно не было задано при вводе" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +130,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="version02" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
