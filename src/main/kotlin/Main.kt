@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
     println("Укажите числом количество философов за круглым столом")
     val countPhilosopher = enteringCountNum()
 
@@ -6,8 +6,11 @@ fun main(args: Array<String>) {
     val sticks = ArrayList<Stick>()
 
     for (i in 0 until countPhilosopher) {
-        print("Имя философа номер $i - ")
-        val namePhilosopher = readln()
+        print("Имя философа номер ${i + 1} - ")
+        var namePhilosopher = readln()
+        if (namePhilosopher.trim() == "") {
+            namePhilosopher = "name_${i + 1}"
+        }
         philosophers.add(Philisopher(namePhilosopher))
         sticks.add(Stick("stick$i"))
     }
@@ -19,9 +22,14 @@ fun main(args: Array<String>) {
 
     while (timeMap.isNotEmpty()) {
         val indexPhilosopher = selectPhilosopherRandom(timeMap)
-        if (checkStickOccupancy(sticks, indexPhilosopher, countPhilosopher)) {
+        val numStick = checkStickOccupancy(sticks, indexPhilosopher, countPhilosopher)
+        if (numStick != -1) {
             philosophers[indexPhilosopher].state = "takes Food"
-            println("${philosophers[indexPhilosopher].name} обедает")
+            if (numStick == indexPhilosopher) {
+                println("${philosophers[indexPhilosopher].name} взял вилку слева и обедает")
+            } else {
+                println("${philosophers[indexPhilosopher].name} взял вилку справа и обедает")
+            }
         } else {
             println("${philosophers[indexPhilosopher].name} размышляет")
         }
@@ -33,7 +41,7 @@ fun checkStickOccupancy(
     timeSticks: ArrayList<Stick>,
     indexPhilosopher: Int,
     countPhilosopher: Int
-): Boolean {
+): Int {
     val indexStickLeft = indexPhilosopher
     val indexStickRight = if (indexPhilosopher - 1 == -1) {
         countPhilosopher - 1
@@ -42,19 +50,17 @@ fun checkStickOccupancy(
     }
     val timeIndexStick = mutableListOf(indexStickLeft, indexStickRight)
     val rndStick = timeIndexStick.random()
-    if (timeSticks[rndStick].state == "busy") {
+    return if (timeSticks[rndStick].state == "busy") {
         timeIndexStick.remove(rndStick)
         if (timeSticks[timeIndexStick[0]].state == "busy") {
-            return false
+            -1
         } else {
-            timeSticks[0].state = "busy"
-            println("${timeSticks[0].name} занята")
-            return true
+            timeSticks[timeIndexStick[0]].state = "busy"
+            timeIndexStick[0]
         }
     } else {
         timeSticks[rndStick].state = "busy"
-        println("${timeSticks[rndStick].name} занята")
-        return true
+        rndStick
     }
 }
 
@@ -77,6 +83,6 @@ fun enteringCountNum(): Int {
 
 fun isPosOrNegNumber(s: String): Boolean {
     val regex = """^[0-9]+$""".toRegex()
-    return if (s.isNullOrEmpty()) false
+    return if (s.isEmpty()) false
     else regex.matches(s)
 }
