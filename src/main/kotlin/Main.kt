@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
         val indexPhilosopher = selectPhilosopherRandom(timeMap)
         if (checkStickOccupancy(sticks, indexPhilosopher, countPhilosopher)) {
             philosophers[indexPhilosopher].state = "takes Food"
-            println("Взял или слева или справа")
+            println("${philosophers[indexPhilosopher].name} обедает")
         } else {
             println("${philosophers[indexPhilosopher].name} размышляет")
         }
@@ -38,15 +38,22 @@ fun checkStickOccupancy(
     val indexStickRight = if (indexPhilosopher - 1 == -1) {
         countPhilosopher - 1
     } else {
-        indexPhilosopher
+        indexPhilosopher - 1
     }
     val timeIndexStick = mutableListOf(indexStickLeft, indexStickRight)
     val rndStick = timeIndexStick.random()
     if (timeSticks[rndStick].state == "busy") {
         timeIndexStick.remove(rndStick)
-        return false
+        if (timeSticks[timeIndexStick[0]].state == "busy") {
+            return false
+        } else {
+            timeSticks[0].state = "busy"
+            println("${timeSticks[0].name} занята")
+            return true
+        }
     } else {
         timeSticks[rndStick].state = "busy"
+        println("${timeSticks[rndStick].name} занята")
         return true
     }
 }
